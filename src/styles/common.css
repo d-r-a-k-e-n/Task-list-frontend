@@ -1,0 +1,26 @@
+:root {
+  --background-light: #f5f5f5;
+  --task-light: #ffffff;
+  --text-light: #1a1a1a;
+  --checkbox-light: #007bff;
+
+  --background-dark: #18181b;
+  --task-dark: #27272a;
+  --text-dark: #ffffff;
+  --checkbox-dark: #72b6f4;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  background-color: var(--background-light);
+  /* color: var(); */
+
+  width: 100%;
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
