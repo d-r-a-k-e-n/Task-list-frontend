@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ffebe59.css",
-    "main.js": "/static/js/main.6bf63700.js",
-    "static/media/remove.svg": "/static/media/remove.3923e6a66878c20f899e25926b28ef5e.svg",
-    "static/media/sun.svg": "/static/media/sun.3f16b76014085216452ee897cc26a0e0.svg",
-    "static/media/moon.svg": "/static/media/moon.bc10d1e88c26ab519460c4fadeb1fa1a.svg",
-    "index.html": "/index.html",
-    "main.5ffebe59.css.map": "/static/css/main.5ffebe59.css.map",
-    "main.6bf63700.js.map": "/static/js/main.6bf63700.js.map"
+    "main.css": "/Task-list/static/css/main.5ffebe59.css",
+    "main.js": "/Task-list/static/js/main.28a66e04.js",
+    "static/media/remove.svg": "/Task-list/static/media/remove.3923e6a66878c20f899e25926b28ef5e.svg",
+    "static/media/sun.svg": "/Task-list/static/media/sun.3f16b76014085216452ee897cc26a0e0.svg",
+    "static/media/moon.svg": "/Task-list/static/media/moon.bc10d1e88c26ab519460c4fadeb1fa1a.svg",
+    "index.html": "/Task-list/index.html",
+    "main.5ffebe59.css.map": "/Task-list/static/css/main.5ffebe59.css.map",
+    "main.28a66e04.js.map": "/Task-list/static/js/main.28a66e04.js.map"
   },
   "entrypoints": [
     "static/css/main.5ffebe59.css",
-    "static/js/main.6bf63700.js"
+    "static/js/main.28a66e04.js"
   ]
 }
