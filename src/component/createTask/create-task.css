@@ -1,6 +1,6 @@
 .task__add {
   margin-top: 80px;
-  border: 2px solid #fff;
+  border: 2px solid var(--task-light);
   border-radius: 16px;
   background: var(--background-light);
   font-family: "Segoe UI", sans-serif;
