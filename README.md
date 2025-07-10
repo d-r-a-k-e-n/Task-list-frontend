@@ -17,7 +17,7 @@ The **Task List** web application is a modern and user-friendly tool designed to
 - **Theming**:
   - Toggle between light and dark themes.
 - **Persistent Data**:
-  - Tasks are saved using the browser's Local Storage, ensuring data remains available even after refreshing the page.
+  - Tasks are stored in the database, and interaction takes place through Axios
 
 ## Technologies Used
 
@@ -27,10 +27,14 @@ The **Task List** web application is a modern and user-friendly tool designed to
   - For managing state and lifecycle events efficiently.
 - **React Components**:
   - Modular and reusable UI elements.
+- **React Context**:
+  - For storing states.
+- **Axios**:
+  - Interaction with the backend.
 - **CSS**:
   - For styling the application and supporting the light/dark theme.
 - **Local Storage**:
-  - To persist user data across sessions.
+  - Saving a theme.
 
 ## Getting Started
 
@@ -43,11 +47,11 @@ The **Task List** web application is a modern and user-friendly tool designed to
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/task-list.git
+   git clone https://github.com/d-r-a-k-e-n/Task-list-frontend.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd task-list
+   cd Task-list-frontend
    ```
 3. Install dependencies:
    ```bash
@@ -87,29 +91,6 @@ The build files will be available in the `build/` directory.
 - `src/components`: Contains reusable React components.
 - `src/styles`: CSS files for styling the application.
 - `src/utils`: Utility functions for managing Local Storage and other helpers.
-
-## Contribution
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature/bugfix:
-   ```bash
-   git checkout -b feature-name
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m "Add feature-name"
-   ```
-4. Push to your branch:
-   ```bash
-   git push origin feature-name
-   ```
-5. Open a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgments
 

@@ -1,18 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import Header from "./component/header/Header";
 import TaskList from "./component/taskList/TaskList";
-import CreateTask from "./component/createTask/CreateTask";
 
 function App() {
   const { isLightTheme } = useContext(ThemeContext);
+  const [filter, setFilter] = useState("all");
 
   return (
     <div className={isLightTheme ? "light-theme" : "dark-theme"}>
-      <Header />
+      <Header filter={filter} setFilter={setFilter} />
       <main>
-        <TaskList />
-        <CreateTask />
+        <TaskList filter={filter} />
       </main>
     </div>
   );

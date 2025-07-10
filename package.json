@@ -4,6 +4,7 @@
   "homepage": "https://d-r-a-k-e-n.github.io/Task-list",
   "private": true,
   "dependencies": {
+    "axios": "^1.9.0",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -34,5 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "https://task-list-backend-1.onrender.com"
 }

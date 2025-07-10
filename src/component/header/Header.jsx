@@ -1,15 +1,13 @@
 import React, { useContext } from "react";
 
-import { useTasks } from "../../context/TaskContext";
 import { ThemeContext } from "../../context/ThemeContext";
 import { ReactComponent as Moon } from "../../icon/moon.svg";
 import { ReactComponent as Sun } from "../../icon/sun.svg";
 
 import "./header.css";
 
-export default function Header() {
+export default function Header({ filter, setFilter }) {
   const { isLightTheme, toggleTheme } = useContext(ThemeContext);
-  const { filter, setFilter } = useTasks();
 
   return (
     <header className="header">
