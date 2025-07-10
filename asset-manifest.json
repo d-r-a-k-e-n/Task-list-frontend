@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Task-list/static/css/main.5ffebe59.css",
-    "main.js": "/Task-list/static/js/main.28a66e04.js",
-    "static/media/remove.svg": "/Task-list/static/media/remove.3923e6a66878c20f899e25926b28ef5e.svg",
-    "static/media/sun.svg": "/Task-list/static/media/sun.3f16b76014085216452ee897cc26a0e0.svg",
-    "static/media/moon.svg": "/Task-list/static/media/moon.bc10d1e88c26ab519460c4fadeb1fa1a.svg",
-    "index.html": "/Task-list/index.html",
-    "main.5ffebe59.css.map": "/Task-list/static/css/main.5ffebe59.css.map",
-    "main.28a66e04.js.map": "/Task-list/static/js/main.28a66e04.js.map"
+    "main.css": "/Task-list-frontend/static/css/main.788f006c.css",
+    "main.js": "/Task-list-frontend/static/js/main.969edc75.js",
+    "static/media/remove.svg": "/Task-list-frontend/static/media/remove.3923e6a66878c20f899e25926b28ef5e.svg",
+    "static/media/sun.svg": "/Task-list-frontend/static/media/sun.3f16b76014085216452ee897cc26a0e0.svg",
+    "static/media/moon.svg": "/Task-list-frontend/static/media/moon.bc10d1e88c26ab519460c4fadeb1fa1a.svg",
+    "index.html": "/Task-list-frontend/index.html",
+    "main.788f006c.css.map": "/Task-list-frontend/static/css/main.788f006c.css.map",
+    "main.969edc75.js.map": "/Task-list-frontend/static/js/main.969edc75.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ffebe59.css",
-    "static/js/main.28a66e04.js"
+    "static/css/main.788f006c.css",
+    "static/js/main.969edc75.js"
   ]
 }
