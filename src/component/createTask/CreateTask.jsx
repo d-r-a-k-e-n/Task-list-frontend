@@ -1,9 +1,10 @@
-import { useState } from "react";
-import axios from "axios";
+import {useState} from "react";
 
 import "./create-task.css";
+import {createTask} from "../../services/taskService";
 
-export default function CreateTask({ onTaskCreated }) {
+
+export default function CreateTask({onTaskCreated}) {
   const [taskInput, setTaskInput] = useState("");
 
   const handleInputChange = (e) => {
@@ -13,12 +14,7 @@ export default function CreateTask({ onTaskCreated }) {
   const handleKeyDown = async (e) => {
     if (e.key === "Enter" && taskInput.trim()) {
       try {
-        await axios.post(
-          "https://task-list-backend-1.onrender.com/tasks/:userId",
-          {
-            title: taskInput,
-          }
-        );
+        await createTask(taskInput);
 
         setTaskInput("");
 

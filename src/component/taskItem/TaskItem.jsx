@@ -1,14 +1,13 @@
 import axios from "axios";
-import { ReactComponent as Remove } from "../../icon/remove.svg";
+import {ReactComponent as Remove} from "../../icon/remove.svg";
+import {deleteTask, updateTask} from "../../services/taskService";
 
 import "./task-item.css";
 
-export default function TaskItem({ id, name, completed, onTaskUpdated }) {
+export default function TaskItem({id, name, completed, onTaskUpdated}) {
   const handleToggleCompleted = async () => {
     try {
-      await axios.put(`https://task-list-backend-1.onrender.com/tasks/${id}`, {
-        completed: !completed,
-      });
+      await updateTask(id, completed);
       if (onTaskUpdated) {
         onTaskUpdated();
       }
@@ -19,9 +18,7 @@ export default function TaskItem({ id, name, completed, onTaskUpdated }) {
 
   const handleDeleteTask = async () => {
     try {
-      await axios.delete(
-        `https://task-list-backend-1.onrender.com/tasks/${id}`
-      );
+      await deleteTask(id)
       if (onTaskUpdated) {
         onTaskUpdated();
       }
@@ -48,7 +45,7 @@ export default function TaskItem({ id, name, completed, onTaskUpdated }) {
         type={"button"}
         onClick={handleDeleteTask}
       >
-        <Remove className="remove__icon" />
+        <Remove className="remove__icon"/>
       </button>
     </li>
   );
