@@ -14,8 +14,8 @@ export const createTask = async (title) => {
 export const getTask = async () => {
   try {
     const response = await axios.get(
-      // "https://task-list-backend-1.onrender.com/tasks"
-      "http://localhost:3001/tasks"
+      "https://task-list-backend-1.onrender.com/tasks"
+      // "http://localhost:3001/tasks"
     );
     return response.data;
   } catch (error) {

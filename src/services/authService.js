@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const loginService = async (email, password) => {
   try {
-    await axios.post("http://localhost:3001/auth/login", {
+    await axios.post("https://task-list-backend-1.onrender.com/auth/login", {
       email,
       password
     });
@@ -13,7 +13,7 @@ export const loginService = async (email, password) => {
 
 export const signupService = async (email, password, name) => {
   try {
-    await axios.post("http://localhost:3001/auth/signup", {
+    await axios.post("https://task-list-backend-1.onrender.com/auth/signup", {
       email,
       password,
       name
