@@ -1,5 +1,4 @@
-import axios from "axios";
-import {ReactComponent as Remove} from "../../icon/remove.svg";
+import { ReactComponent as Remove } from "../../icon/remove.svg";
 import {deleteTask, updateTask} from "../../services/taskService";
 
 import "./task-item.css";

@@ -1,5 +1,16 @@
 .signup {
-  margin: 40px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.signup__error {
+  color: #e74c3c;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .signup__title {
@@ -47,10 +58,22 @@
   padding: 18px 22px;
   width: 100%;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.signup__btn:hover {
+.signup__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.signup__btn:not(:disabled) {
   background: var(--checkbox-light);
+  color: #fff;
+}
+
+.signup__btn:not(:disabled):hover {
+  background: var(--checkbox-light);
+  filter: brightness(1.1);
 }
 
 .signup__text {

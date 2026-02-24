@@ -1,5 +1,4 @@
 import {useState, useEffect, useCallback} from "react";
-import axios from "axios";
 
 import CreateTask from "../createTask/CreateTask";
 import TaskItem from "../taskItem/TaskItem";

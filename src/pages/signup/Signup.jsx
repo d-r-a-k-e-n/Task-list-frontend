@@ -1,60 +1,70 @@
-import {Profiler, useRef} from "react";
-
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { signupService, setAuthData } from "../../services/authService";
 import "./signup.css";
-import {signupService} from "../../services/authService";
-import {Link} from "react-router-dom";
 
 export default function Signup() {
-  const emailRef = useRef(null);
-  const passwordRef = useRef(null);
-  const nameRef = useRef(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
+  const isFormValid = email.trim() !== "" && password.trim() !== "" && name.trim() !== "";
 
-  const SignUp = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
     try {
-      await signupService(emailRef.current.value, passwordRef.current.value, nameRef.current.value);
-      localStorage.setItem("isAuth", "true");
-      window.location.href = "/";
-    } catch (error) {
-      console.error("Error LogIn:", error);
-      localStorage.setItem("isAuth", "false");
+      const data = await signupService(email, password, name);
+      setAuthData(data);
+      navigate("/", { replace: true });
+    } catch (err) {
+      const message = err.response?.data?.message || "Signup failed";
+      setError(message);
     }
   };
 
   return (
     <section className="signup">
-      <h2 className="signup__title">signup</h2>
+      <h2 className="signup__title">Sign up</h2>
+      {error && <p className="signup__error">{error}</p>}
       <form
-        style={{display: "flex", flexDirection: "column"}}
-        onSubmit={SignUp}
+        style={{ display: "flex", flexDirection: "column" }}
+        onSubmit={handleSubmit}
       >
         <input
           className="signup__input"
           type="email"
-          ref={emailRef}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="email"
+          required
         />
         <input
           className="signup__input"
           type="password"
-          ref={passwordRef}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="password"
+          required
         />
         <input
           className="signup__input"
           type="text"
-          ref={nameRef}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           placeholder="name"
+          required
         />
-        <button className="signup__btn" type="submit">
+        <button className="signup__btn" type="submit" disabled={!isFormValid}>
           SIGN UP
         </button>
       </form>
-
-      <p className="signup__text">Have an account?{' '}
-        <Link className="signup__link" to="/login">Log In</Link></p>
+      <p className="signup__text">
+        Have an account? <Link className="signup__link" to="/login">Sign in</Link>
+      </p>
     </section>
   );
 }

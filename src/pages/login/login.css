@@ -1,5 +1,16 @@
 .login {
-  margin: 40px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.login__error {
+  color: #e74c3c;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .login__title {
@@ -47,10 +58,22 @@
   padding: 18px 22px;
   width: 100%;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.login__btn:hover {
+.login__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.login__btn:not(:disabled) {
   background: var(--checkbox-light);
+  color: #fff;
+}
+
+.login__btn:not(:disabled):hover {
+  background: var(--checkbox-light);
+  filter: brightness(1.1);
 }
 
 .login__text {

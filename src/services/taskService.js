@@ -1,44 +1,22 @@
-import axios from "axios";
+import { apiClient } from "./client";
+
+const TASKS_BASE = "/tasks";
 
 export const createTask = async (title) => {
-  try {
-    await axios.post("https://task-list-backend-1.onrender.com/tasks/:userId",
-      {
-        title
-      })
-  } catch (error) {
-    console.error("Error getting tasks", error)
-  }
-}
+  const { data } = await apiClient.post(TASKS_BASE, { title });
+  return data;
+};
 
 export const getTask = async () => {
-  try {
-    const response = await axios.get(
-      "https://task-list-backend-1.onrender.com/tasks"
-      // "http://localhost:3001/tasks"
-    );
-    return response.data;
-  } catch (error) {
-    console.error("Error getting tasks", error)
-  }
-}
+  const { data } = await apiClient.get(TASKS_BASE);
+  return data;
+};
 
-export const updateTask = async (id, completed) => {
-  try {
-    await axios.put(`https://task-list-backend-1.onrender.com/tasks/${id}`, {
-      completed: !completed
-    });
-  } catch (error) {
-    console.error("Error update tasks", error)
-  }
-}
+export const updateTask = async (id) => {
+  const { data } = await apiClient.put(`${TASKS_BASE}/${id}`);
+  return data;
+};
 
 export const deleteTask = async (id) => {
-  try {
-    await axios.delete(
-      `https://task-list-backend-1.onrender.com/tasks/${id}`
-    );
-  } catch (error) {
-    console.error("Error deleting task", error)
-  }
-}
+  await apiClient.delete(`${TASKS_BASE}/${id}`);
+};
